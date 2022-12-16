@@ -1,0 +1,754 @@
+#Jogo da Velha, onde se pode jogar com 2 jogadores ou contra o computador
+#(OBS: o sistema do ~player VS maquina~ e bem simples e a inteligencia e bem baixa, mas funciona)
+import os
+import random
+
+mat = [0,1,2,3,
+         4,5,6,
+         7,8,9]
+
+c1 = 9
+c = 9
+valor = 0
+num1 = 0
+num2 = 0
+num3 = 0
+num4 = 0
+num5 = 0
+num6 = 0
+num7 = 0
+num8 = 0
+num9 = 0
+game = 9
+o = 0
+x = 0
+
+
+def vet():
+    mat[1] = 1
+    mat[2] = 2
+    mat[3] = 3
+    mat[4] = 4
+    mat[5] = 5
+    mat[6] = 6
+    mat[7] = 7
+    mat[8] = 8
+    mat[9] = 9
+def tabuleiro():
+   print("┌───┬───┬───┐")
+   print("│",mat[1],"│",mat[2],"│",mat[3],"│")
+   print("├───┼───┼───┤")
+   print("│",mat[4],"│",mat[5],"│",mat[6],"│")
+   print("├───┼───┼───┤")
+   print("│",mat[7],"│",mat[8],"│",mat[9],"│")
+   print("└───┴───┴───┘")
+while game == 9 :
+    
+    c = 9
+    os.system('cls')
+    print("Ola jogador, bem vindo!!\n\nEscolha o modo de jogo:\n1-Dois jogadores\n2-Jogador VS Maquina")
+    opc1 = int(input("Opção: "))
+    while opc1 < 1 or opc1 > 3:
+        os.system('cls')
+        print("OPÇÃO INVALIDA!!\n")
+        print("Escolha o modo de jogo:\n1-Dois jogadores\n2-Jogador VS Maquina\n")
+        opc1 = int(input("Opção: "))
+    match opc1:
+        case 1:
+        
+            while c != 0 :
+                
+                valor2 = valor%2 
+                
+                os.system('cls')
+                
+                tabuleiro()
+                print(valor)
+                print(valor2)
+                print(c)
+                
+                if valor2 == 0:
+                    num = int(input("Vez do O , escolha uma casa: "))
+                elif valor2 == 1:
+                    num = int(input("Vez do X , escolha uma casa: ")) 
+                
+                if num < 0 or num > 9 or num1 > 1 or num2 >1 or num3 >1 or num4 > 1 or num5 > 1 or num6 > 1 or num7 > 1 or num8 > 1 or num9 > 1:
+                    print("NUMERO INVALIDO\n")
+                if num == 1 and num1 == 0:
+                    
+                    if valor2 == 0:
+                        mat[1]= "O"
+                        num1 = num1 + 1
+                        valor = valor + 1 
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+                    elif valor2 == 1:
+                        mat[1]= "X"
+                        num1 = num1 + 1
+                        valor = valor + 1 
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+
+                if num == 2 and num2 == 0:
+                    if valor2 == 0:
+                        mat[2]= "O"
+                        num2 = num2 + 1
+                        valor = valor + 1 
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+                    elif valor2 == 1:
+                        mat[2]= "X"
+                        num2 = num2 + 1
+                        valor = valor + 1 
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+
+                if num == 3 and num3 == 0:
+                    if valor2 == 0:
+                        mat[3]= "O"
+                        num3 = num3 + 1
+                        valor = valor + 1 
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+                    elif valor2 == 1:
+                        mat[3]= "X"
+                        num3 = num3 + 1
+                        valor = valor + 1 
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+
+                if num == 4 and num4 == 0:
+                    if valor2 == 0:
+                        mat[4]= "O"
+                        num4 = num4 + 1
+                        valor = valor + 1 
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+                    elif valor2 == 1:
+                        mat[4]= "X"
+                        num4 = num4 + 1
+                        valor = valor + 1
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+
+                if num == 5 and num5 == 0:
+                    if valor2 == 0:
+                        mat[5]= "O"
+                        num5 = num5 + 1
+                        valor = valor + 1
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+                    elif valor2 == 1:
+                        mat[5]= "X"
+                        num5 = num5 + 1
+                        valor = valor + 1
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+
+                if num == 6 and num6 == 0:
+                    if valor2 == 0:
+                        mat[6]= "O"
+                        num6 = num6 + 1
+                        valor = valor + 1 
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+                    elif valor2 == 1:
+                        mat[6]= "X"
+                        num6 = num6 + 1
+                        valor = valor + 1 
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+
+                if num == 7 and num7 == 0:
+                    if valor2 == 0:
+                        mat[7]= "O"
+                        num7 = num7 + 1
+                        valor = valor + 1 
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+                    elif valor2 == 1:
+                        mat[7]= "X"
+                        num7 = num7 + 1
+                        valor = valor + 1 
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+                
+                        
+                if num == 8 and num8 == 0:
+                    if valor2 == 0:
+                        mat[8]= "O"
+                        num8 = num8 + 1
+                        valor = valor + 1 
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+                    elif valor2 == 1:
+                        mat[8]= "X"
+                        num8 = num8 + 1
+                        valor = valor + 1 
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+                
+                        
+                if num == 9 and num9 == 0:
+                    if valor2 == 0 :
+                        mat[9]= "O"
+                        num9 = num9 + 1
+                        valor = valor + 1 
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+                    elif valor2 == 1:
+                        mat[9]= "X"
+                        num9 = num9 + 1
+                        valor = valor + 1 
+                        valor2 = valor % 2
+                        c = c - 1
+                        game = game - 1
+                
+                if (mat[1] == mat[2] and mat[2] == mat[3] and mat[1] == "O") or (mat[4] == mat[5] and mat[5] == mat[6] and mat[5] == "O") or (mat[7] == mat[8] and mat[8] == mat[9] and mat[7] == "O") or (mat[1] == mat[4] and mat[4] == mat[7] and mat[1] == "O") or (mat[2] == mat[5] and mat[5] == mat[8] and mat[2] == "O") or (mat[3] == mat[6] and mat[6] == mat[9] and mat[3] == "O") or (mat[1] == mat[5] and mat[5] == mat[9] and mat[1] == "O") or (mat[3] == mat[5] and mat[5] == mat[7] and mat[3] == "O"):
+                    
+                    o = 1
+                    c = 0
+                    
+                    os.system('cls')  
+                    print("Resultado final: Vitoria do O \n")
+                    tabuleiro()
+                    opc = int(input("1-Jogar Novamente\n2-Retornar ao Inicio\n3-Finalizar\nOpção:"))
+                    match opc:
+                        case 1:
+                                              
+                            c = 9
+                            valor = valor - 9
+                            vet()
+                            num1 = 0
+                            num2 = 0
+                            num3 = 0
+                            num4 = 0
+                            num5 = 0
+                            num6 = 0
+                            num7 = 0
+                            num8 = 0
+                            num9 = 0
+                        case 2:
+                        
+                            game = 9
+                            valor = valor - 9
+                            vet()
+                            num1 = 0
+                            num2 = 0
+                            num3 = 0
+                            num4 = 0
+                            num5 = 0
+                            num6 = 0
+                            num7 = 0
+                            num8 = 0
+                            num9 = 0
+                                    
+                        case 3:
+                            c = 0
+                            os.system('cls')
+                            print("Obrigado por jogar")
+                elif (mat[1] == mat[2] and mat[2] != mat[3] and mat[1] == "X") or (mat[4] == mat[5] and mat[5] == mat[6] and mat[5] == "X") or (mat[7] == mat[8] and mat[8] == mat[9] and mat[7] == "X") or (mat[1] == mat[4] and mat[4] == mat[7] and mat[1] == "X") or (mat[2] == mat[5] and mat[5] == mat[8] and mat[2] == "X") or (mat[3] == mat[6] and mat[6] == mat[9] and mat[3] == "X") or (mat[1] == mat[5] and mat[5] == mat[9] and mat[1] == "X") or (mat[3] == mat[5] and mat[5] == mat[7] and mat[3] == "X"):        
+                    
+                    x = 1
+                    c = 0
+                    os.system('cls')
+                    print("Resultado final: Vitoria do X \n")
+                    tabuleiro()
+                    opc = int(input("1-Jogar Novamente\n2-Retornar ao Inicio\n3-Finalizar\nOpção:"))
+                    match opc:
+                        case 1:
+                                              
+                            c = 9
+                            valor = valor - 9
+                            vet()
+                            num1 = 0
+                            num2 = 0
+                            num3 = 0
+                            num4 = 0
+                            num5 = 0
+                            num6 = 0
+                            num7 = 0
+                            num8 = 0
+                            num9 = 0
+                        case 2:
+                        
+                            game = 9
+                            valor = valor - 9
+                            vet()
+                            num1 = 0
+                            num2 = 0
+                            num3 = 0
+                            num4 = 0
+                            num5 = 0
+                            num6 = 0
+                            num7 = 0
+                            num8 = 0
+                            num9 = 0
+                                    
+                        case 3:
+                            c = 0
+                            os.system('cls')
+                            print("Obrigado por jogar")
+                if valor == 9 and c == 0:
+                    os.system('cls')
+                    print("Resultado final: EMPATE \n")
+
+                    tabuleiro()
+
+                                    
+                    opc = int(input("1-Jogar Novamente\n2-Retornar ao Inicio\n3-Finalizar\nOpção:"))
+                    match opc:
+                        case 1:
+                                              
+                            c = 9
+                            valor = valor - 9
+                            vet()
+                            num1 = 0
+                            num2 = 0
+                            num3 = 0
+                            num4 = 0
+                            num5 = 0
+                            num6 = 0
+                            num7 = 0
+                            num8 = 0
+                            num9 = 0
+                        case 2:
+                        
+                            game = 9
+                            valor = valor - 9
+                            vet()
+                            num1 = 0
+                            num2 = 0
+                            num3 = 0
+                            num4 = 0
+                            num5 = 0
+                            num6 = 0
+                            num7 = 0
+                            num8 = 0
+                            num9 = 0
+                                    
+                        case 3:
+                            c = 0
+                            os.system('cls')
+                            print("Obrigado por jogar")
+                        
+        case 2:
+            valor = 0
+            while c1 != 0 :
+                rand = random.randint(1,9)
+                valor2 = valor%2
+                os.system('cls')
+                print("Boa sorte jogador\n")
+                tabuleiro()
+                print(valor)
+                print(valor2)
+                print(c)
+                
+                
+                if valor2 == 0:
+                    num = int(input("Sua marcação: O\nEscolha uma casa: "))
+                    
+                    if num < 0 or num > 9 or num1 > 1 or num2 >1 or num3 >1 or num4 > 1 or num5 > 1 or num6 > 1 or num7 > 1 or num8 > 1 or num9 > 1:
+                        print("NUMERO INVALIDO\n")
+                
+                    if num == 1 and num1 == 0:
+                        
+                        if valor2 == 0:
+                            mat[1]= "O"
+                            num1 = num1 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                        
+
+                    if num == 2 and num2 == 0:
+                        if valor2 == 0:
+                            mat[2]= "O"
+                            num2 = num2 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                        
+
+                    if num == 3 and num3 == 0:
+                        if valor2 == 0:
+                            mat[3]= "O"
+                            num3 = num3 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                        
+
+                    if num == 4 and num4 == 0:
+                        if valor2 == 0:
+                            mat[4]= "O"
+                            num4 = num4 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                        
+
+                    if num == 5 and num5 == 0:
+                        if valor2 == 0:
+                            mat[5]= "O"
+                            num5 = num5 + 1
+                            valor = valor + 1
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                        
+
+                    if num == 6 and num6 == 0:
+                        if valor2 == 0:
+                            mat[6]= "O"
+                            num6 = num6 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                        
+
+                    if num == 7 and num7 == 0:
+                        if valor2 == 0:
+                            mat[7]= "O"
+                            num7 = num7 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                        
+                    
+                            
+                    if num == 8 and num8 == 0:
+                        if valor2 == 0:
+                            mat[8]= "O"
+                            num8 = num8 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                        
+                    
+                            
+                    if num == 9 and num9 == 0:
+                        if valor2 == 0 :
+                            mat[9]= "O"
+                            num9 = num9 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                            
+                elif valor2 == 1:
+                    
+                    
+                    if (mat[2] == mat[3]and mat[2] == "O"and num1 == 0) or (mat[4] == mat[7]and mat[4] == "O" and num1 ==0) or (mat[5] == mat[9] and mat[1] == "O" and num1 == 0):
+                        
+                            mat[1]= "X"
+                            num1 = num1 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                    elif rand == 1 and num1 == 0:
+                        
+                        
+                            mat[1]= "X"
+                            num1 = num1 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                        
+                    if (mat[1] == mat[3] and mat[1] == "O" and num2 ==0) or (mat[5] == mat[8] and mat[5] == "O" and num2 ==0):
+                       
+                            mat[2]= "X"
+                            num2 = num2 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                    elif rand == 2 and num2 == 0:
+                        
+                            mat[2]= "X"
+                            num2 = num2 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                        
+                    
+                    if (mat[1] == mat[2] and mat[1] == "O" and num3 ==0) or (mat[6] == mat[9]and mat[6] == "O" and num3 ==0)or (mat[5] == mat[7] and mat[5] == "O" and num3 ==0): 
+                        
+                            mat[3]= "X"
+                            num3 = num3 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                    elif rand == 3 and num3 == 0:
+                        
+                            mat[3]= "X"
+                            num3 = num3 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                        
+
+
+                    if (mat[1] == mat[7] and mat[1] == "O" and num4 ==0) or (mat[5] == mat[6] and mat[5] == "O" and num4 ==0):
+                          
+                            mat[4]= "X"
+                            num4 = num4 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1 
+                    elif rand == 4 and num4 == 0:
+                        
+                            mat[4]= "X"
+                            num4 = num4 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                        
+
+                    if (mat[1] == mat[9]and mat[1] == "O" and num5 ==0)or(mat[7] == mat[3]and mat[7] == "O" and num5 ==0)or(mat[4] == mat[6]and mat[4] == "O" and num5 ==0)or(mat[2] == mat[8]and mat[2] == "O" and num5 ==0):
+                        
+                            mat[5]= "X"
+                            num5 = num5 + 1
+                            valor = valor + 1
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                    elif rand == 5 and num5 == 0:
+                        
+                            mat[5]= "X"
+                            num5 = num5 + 1
+                            valor = valor + 1
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                        
+
+                    if (mat[4] == mat[5]and mat[4] == "O" and num6 ==0)or(mat[3] == mat[9]and mat[3] == "O" and num6 ==0):
+                        
+                            mat[6]= "X"
+                            num6 = num6 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                    elif rand == 6 and num6 == 0:
+                        
+                            mat[6]= "X"
+                            num6 = num6 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                        
+
+                    if (mat[4] == mat[1]and mat[4] == "O" and num7 ==0)or(mat[8] == mat[9]and mat[8] == "O" and num7 ==0)or(mat[5] == mat[3]and mat[5] == "O" and num7 ==0):
+                           
+                            mat[7]= "X"
+                            num7 = num7 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                    elif rand == 7 and num7 == 0:
+                       
+                            mat[7]= "X"
+                            num7 = num7 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                    
+                            
+                    if (mat[7] == mat[9]and mat[7] == "O" and num8 ==0)or(mat[2] == mat[5]and mat[2] == "O" and num8 ==0):
+                        
+                            mat[8]= "X"
+                            num8 = num8 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                    elif rand == 8 and num8 == 0:
+                        
+                            mat[8]= "X"
+                            num8 = num8 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                        
+                    
+                            
+                    if (mat[7] == mat[8]and mat[7] == "O" and num9 ==0)or(mat[3]and mat[3] == "O" == mat[6] and num9 ==0)or(mat[1] == mat[5]and mat[1] == "O" and num9 ==0) :
+                        if valor2 == 1:
+                            mat[9]= "X"
+                            num9 = num9 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1
+                    elif (rand == 9 and num9 == 0):
+                        if valor2 == 1:
+                            mat[9]= "X"
+                            num9 = num9 + 1
+                            valor = valor + 1 
+                            valor2 = valor % 2
+                            c1 = c1 - 1
+                            game = game - 1 
+                if (mat[1] == mat[2] and mat[2] == mat[3] and mat[1] == "O") or (mat[4] == mat[5] and mat[5] == mat[6] and mat[5] == "O") or (mat[7] == mat[8] and mat[8] == mat[9] and mat[7] == "O") or (mat[1] == mat[4] and mat[4] == mat[7] and mat[1] == "O") or (mat[2] == mat[5] and mat[5] == mat[8] and mat[2] == "O") or (mat[3] == mat[6] and mat[6] == mat[9] and mat[3] == "O") or (mat[1] == mat[5] and mat[5] == mat[9] and mat[1] == "O") or (mat[3] == mat[5] and mat[5] == mat[7] and mat[3] == "O"):
+                    
+                    
+                    c = 0
+                    
+                    os.system('cls')  
+                    print("Resultado final: Vitoria do JOGADOR \n")
+                    tabuleiro()
+                    opc = int(input("1-Jogar Novamente\n2-Retornar ao Inicio\n3-Finalizar\nOpção:"))
+                    match opc:
+                        case 1:
+                                              
+                            c1 = 9
+                            valor = valor - 9
+                            vet()
+                            num1 = 0
+                            num2 = 0
+                            num3 = 0
+                            num4 = 0
+                            num5 = 0
+                            num6 = 0
+                            num7 = 0
+                            num8 = 0
+                            num9 = 0
+                        case 2:
+                        
+                            game = 9
+                            valor = valor - 9
+                            vet()
+                            num1 = 0
+                            num2 = 0
+                            num3 = 0
+                            num4 = 0
+                            num5 = 0
+                            num6 = 0
+                            num7 = 0
+                            num8 = 0
+                            num9 = 0
+                                    
+                        case 3:
+                            c1 = 0
+                            os.system('cls')
+                            print("Obrigado por jogar")
+                elif (mat[1] == mat[2] and mat[2] != mat[3] and mat[1] == "X") or (mat[4] == mat[5] and mat[5] == mat[6] and mat[5] == "X") or (mat[7] == mat[8] and mat[8] == mat[9] and mat[7] == "X") or (mat[1] == mat[4] and mat[4] == mat[7] and mat[1] == "X") or (mat[2] == mat[5] and mat[5] == mat[8] and mat[2] == "X") or (mat[3] == mat[6] and mat[6] == mat[9] and mat[3] == "X") or (mat[1] == mat[5] and mat[5] == mat[9] and mat[1] == "X") or (mat[3] == mat[5] and mat[5] == mat[7] and mat[3] == "X"):        
+                    
+                    x = 1
+                    c1 = 0
+                    os.system('cls')
+                    print("Resultado final: Vitoria da MAQUINA \n")
+                    tabuleiro()
+                    opc = int(input("1-Jogar Novamente\n2-Retornar ao Inicio\n3-Finalizar\nOpção:"))
+                    match opc:
+                        case 1:
+                                              
+                            c1 = 9
+                            valor = valor - 9
+                            vet()
+                            num1 = 0
+                            num2 = 0
+                            num3 = 0
+                            num4 = 0
+                            num5 = 0
+                            num6 = 0
+                            num7 = 0
+                            num8 = 0
+                            num9 = 0
+                        case 2:
+                        
+                            game = 9
+                            valor = valor - 9
+                            vet()
+                            num1 = 0
+                            num2 = 0
+                            num3 = 0
+                            num4 = 0
+                            num5 = 0
+                            num6 = 0
+                            num7 = 0
+                            num8 = 0
+                            num9 = 0
+                                    
+                        case 3:
+                            c1 = 0
+                            os.system('cls')
+                            print("Obrigado por jogar")
+                if valor == 9 and c1 == 0:
+                    os.system('cls')
+                    print("Resultado final: EMPATE \n")
+
+                    tabuleiro()
+
+                                    
+                    opc = int(input("1-Jogar Novamente\n2-Retornar ao Inicio\n3-Finalizar\n"))
+                    match opc:
+                        case 1:
+                                              
+                            c1 = 9
+                            valor = valor - 9
+                            vet()
+                            num1 = 0
+                            num2 = 0
+                            num3 = 0
+                            num4 = 0
+                            num5 = 0
+                            num6 = 0
+                            num7 = 0
+                            num8 = 0
+                            num9 = 0
+                        case 2:
+                        
+                            game = 9
+                            valor = valor - 9
+                            vet()
+                            num1 = 0
+                            num2 = 0
+                            num3 = 0
+                            num4 = 0
+                            num5 = 0
+                            num6 = 0
+                            num7 = 0
+                            num8 = 0
+                            num9 = 0
+                                    
+                        case 3:
+                            c1 = 0
+                            os.system('cls')
+                            print("Obrigado por jogar") 
