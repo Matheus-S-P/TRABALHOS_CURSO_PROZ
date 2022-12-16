@@ -1,5 +1,7 @@
 #Jogo da Velha, onde se pode jogar com 2 jogadores ou contra o computador
-#
+# Aluno: Matheus de Souza Pinto
+# Turma: 2M
+
 import os
 import random
 
